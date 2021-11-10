@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         typeSpeed: 300,
     });
     var auto_project= new Typed(".auto-project",{
-        strings: ["Projects","React Js", "HTML","CSS","JavaScript","React Native"],
+        strings: ["React Js", "HTML","CSS","JavaScript","React Native"],
         typeSpeed: 200,
         backSpeed:100,
         loop: true
