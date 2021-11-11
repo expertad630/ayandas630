@@ -114,7 +114,7 @@ header .poster{
     position: absolute;
     right: 5%;
     top: 10%;
-    background: transparent;
+    background: radial-gradient(rgba(255, 247, 36, 0.05),rgba(255, 247, 36, 0.09));
     border:  3px solid #fff724;
     border-radius: 50%;
     box-shadow: 1px 0 15px #fff724, inset 1px 0 15px #fff724;
@@ -278,6 +278,8 @@ li.skill-bar {
 @media screen and (max-width: 720px){
     .about{
         flex-direction: column;
+        height: 80vh;
+        margin-bottom: 10%;
     }
     .about .text-box{
         width: 90%;
@@ -296,12 +298,13 @@ li.skill-bar {
 
 .projects{
     width: 90vw;
-    height: 50vh;
+    height: fit-content;
     margin: 10px auto;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
+    margin-bottom: 30px;
     
 }
 .projects h1{
@@ -398,4 +401,351 @@ li.skill-bar {
     color: #000;
     text-decoration: none;
     
+}
+
+@media screen and (max-width:720px){
+    .projects .row{
+        flex-direction: column;
+    }
+    .projects .row .col{
+        width: 90vw;
+        height: 20vh;
+        margin: 3% auto;
+    }
+    .projects .row1 .col:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+   .projects .row2 .col:nth-child(even) {
+       flex-direction: row-reverse;
+   }
+}
+
+/*for services*/
+.services{
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 90vw;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.services h1{
+    width: 100%;
+    height: 30px;
+    font-size: 30px;
+    color: #000;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+.auto-services{
+    color: #fff724;
+}
+.services .container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.container .card{
+    position: relative;
+    cursor: pointer;
+}
+.container .card .face{
+    width: 30vw;
+    height: 200px;
+    transition: 0.5s;
+}
+.container .card .face.face1{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+.container .card .face.face1 .content{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+.container .card:hover .face.face1{
+    background: #fff724;
+    transform: translateY(0);
+}
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+    
+}
+.container .card .face.face1 .content img{
+    width: 80px;
+    height: 80px;
+    color: #fff724;
+    filter: drop-shadow(0 0 5px #fff724);
+}
+.container .card .face.face1 .content h3{
+    margin: 10px auto;
+    padding: 0;
+    color: #000;
+    text-align: center;
+    font-size: 1.5em;
+}
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+@media screen and (max-width:720px){
+    .services{
+        padding: 5px 0;
+    }
+    .services h1{
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .services .container{
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    
+    .container .card .face{
+        width: 80vw;
+    }
+
+}
+
+
+/*for contact*/
+.contacts{
+    width: 90vw;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 10vh;
+    
+}
+.contacts .map{
+    width: 50%;
+    height: 100%;
+    margin: 0 10px;
+    background-color: blueviolet;
+}
+.contacts .map iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.contacts .form{
+    width: 50%;
+    margin: 0 10px;
+}
+.form h1{
+    width: 100%;
+    height: 30px;
+    font-size: 30px;
+    color: #fff724;
+    line-height: 50px;
+    margin-bottom: 20px;
+    
+}
+.form .contact{
+    width: 100%;
+    height: 100%;
+}
+.contact .fields{
+    width: 100%;
+    margin: 5px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.fields label{
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5px;
+    
+}
+.fields input,textarea{
+    width: 100%;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid grey;
+    outline: none;
+}
+.fields textarea{
+    height: 10vh;
+}
+.btn{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px auto;
+}
+.btn button{
+    width: 80px;
+    height: 30px;
+    padding: 10px 15px;
+    border:  3px solid #fff724;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.fields input:focus-within,textarea:focus-within{
+    border-color: #fff724;
+}
+@media screen and (max-width:720px){
+    .contacts{
+        flex-direction: column;
+        margin-bottom: 20vh;
+    }
+    .contacts .map{
+        width: 90vw;
+        height: 50vh;
+        margin: 20px auto;
+    }
+    .contacts .form{
+        width: 90vw;
+    }
+}
+
+/*footer*/
+footer {
+  position: relative;
+  width: 100%;
+  background: #fff724;
+  min-height: 15vh;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .social_icon, footer .menu {
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  margin: 10px 0;
+}
+footer .social_icon li, footer .menu li {
+  list-style: none;
+}
+footer .social_icon li a {
+  font-size: 2em;
+  color: #000;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social_icon li a:hover {
+  transform: translateY(-15px);
+  color: #fff724;
+}
+
+footer .menu li a {
+  font-size: 1.2em;
+  color: #000;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover {
+  opacity: 1;
+  color: #000;
+}
+footer p {
+  color : #000;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('../../resources/img/sketch1636629638568.png');
+  background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 0;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+  0%{
+    background-position-x: 1000px; 
+  }
+  100%{
+    background-position-x: 0px; 
+  }
+}
+
+@keyframes animateWave_02 {
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: 1000px; 
+  }
 }

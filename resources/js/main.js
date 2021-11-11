@@ -15,7 +15,16 @@ window.addEventListener('DOMContentLoaded',()=>{
         backSpeed:100,
         loop: true
     });
-    
+    var auto_services= new Typed(".auto-services",{
+        strings: ["Futuristic Design", "Clean Code","Responsive Design","React Components","Native Apps"],
+        typeSpeed: 200,
+        backSpeed:100,
+        loop: true
+    });
+    var auto_contact= new Typed(".auto-contact",{
+        strings: ["Contact Me"],
+        typeSpeed: 200
+    });
     
     
     document.addEventListener('click',(e)=>{
