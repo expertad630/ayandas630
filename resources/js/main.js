@@ -1,4 +1,13 @@
 window.addEventListener('DOMContentLoaded',()=>{
+    
+    setTimeout(()=>{
+        document.getElementById('loder').style.display='none';
+    },5000)
+    
+    
+    
+    
+    
     var typed = new Typed(".auto-typed",{
         strings: ['Ayan Das','AKA Expert AD',' Web Developer','Front-End Developer'],
         typeSpeed: 100,
