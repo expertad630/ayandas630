@@ -10,7 +10,7 @@ html, body{
 
 .loader{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     background: #000;
     z-index: 999999999;
