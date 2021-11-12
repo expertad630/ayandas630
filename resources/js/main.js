@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     //    document.getElementById('loder').style.display='none';
    // },5000);
     
-    document.getElementById('loder').style.display='none';
+    //document.getElementById('loder').style.display='none';
     
     
     
