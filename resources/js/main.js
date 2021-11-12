@@ -1,10 +1,10 @@
 window.addEventListener('DOMContentLoaded',()=>{
     
-    setTimeout(()=>{
-        document.getElementById('loder').style.display='none';
-    },5000);
+    //setTimeout(()=>{
+    //    document.getElementById('loder').style.display='none';
+   // },5000);
     
-    
+    document.getElementById('loder').style.display='none';
     
     
     
