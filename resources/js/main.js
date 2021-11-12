@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     
     setTimeout(()=>{
         document.getElementById('loder').style.display='none';
-    },8000)
+    },5000);
     
     
     
